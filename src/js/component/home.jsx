@@ -1,26 +1,29 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import TrafficLight from "./TrafficLight";
+import TrafficLightWithPurple from "./TrafficLightWithPurple";
 
-//include images into your bundle
-import rigoImage from "../../img/rigo-baby.jpg";
-
-//create your first component
 const Home = () => {
-	return (
-		<div className="text-center">
-			<h1 className="text-center mt-5">Hello Rigo!</h1>
-			<p>
-				<img src={rigoImage} />
-			</p>
-			<a href="#" className="btn btn-success">
-				If you see this green button... bootstrap is working...
-			</a>
-			<p>
-				Made by{" "}
-				<a href="http://www.4geeksacademy.com">4Geeks Academy</a>, with
-				love!
-			</p>
-		</div>
-	);
+  const [purpleAdded, setPurpleAdded] = useState(false);
+
+  useEffect(() => {}, [purpleAdded]);
+
+  return (
+    <div>
+      {purpleAdded ? <TrafficLightWithPurple /> : <TrafficLight />}
+      <div className="row d-flex justify-content-center my-3">
+        <div className="col-4 d-flex justify-content-center">
+          <button
+            onClick={() => setPurpleAdded(!purpleAdded)}
+            type="button"
+            className="btn text-white w-45"
+            style={{ backgroundColor: "#952a95" }}
+          >
+            {purpleAdded ? "Remove Purple" : "Add Purple"}
+          </button>
+        </div>
+      </div>
+    </div>
+  );
 };
 
 export default Home;

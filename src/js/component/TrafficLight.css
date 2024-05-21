@@ -1,0 +1,108 @@
+body {
+    background-image: url(https://f.cl.ly/items/2K0P3z2y3X3c052f2B3Y/Image%202013.04.30%2021%3A28%3A02.png);
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+  }
+  
+  .traffic-light-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    background-color: #333;
+    width: 140px;
+    height: 550px; 
+    padding: 20px;
+    border-radius: 30px;
+  }
+  
+  .traffic-light-container.with-purple {
+    height: 650px; 
+  }
+  
+  .traffic-light-stand {
+    height: 100px;
+    width: 30px;
+    background-color: black;
+    margin-bottom: -50px;
+    z-index: -1;
+  }
+  
+  .traffic-light {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    flex-grow: 1;
+  }
+  
+  .light {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: grey;
+    border: none;
+    cursor: pointer;
+    margin: 10px 0;
+  }
+  
+  .red {
+    background-color: red;
+  }
+  
+  .yellow {
+    background-color: yellow;
+  }
+  
+  .green {
+    background-color: green;
+  }
+  
+  .purple {
+    background-color: purple;
+  }
+  
+  .glow-red {
+    box-shadow: 0 0 20px rgb(231, 226, 226);
+  }
+  
+  .glow-yellow {
+    box-shadow: 0 0 20px rgb(253, 253, 253);
+  }
+  
+  .glow-green {
+    box-shadow: 0 0 20px rgb(207, 236, 207);
+  }
+  
+  .glow-purple {
+    box-shadow: 0 0 20px rgb(235, 226, 235);
+  }
+  
+  .bg-black {
+    background-color: black;
+  }
+  
+  .controls {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+  }
+  
+  .btn {
+    width: 120px;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  .buttons-container { 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+  }
